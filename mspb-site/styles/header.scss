@@ -1,0 +1,156 @@
+@use "./abstract/colors" as *;
+
+header{
+    background-color: $blue;
+    padding: 0 20px;
+
+    li{
+      list-style: none;
+
+    a{
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.nav {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+
+  &__logo {
+    margin-left: 3%;
+    svg {
+      width: 200px;
+      fill: $white;
+    }
+  }
+
+  &-menu{
+    display: grid;
+    grid-auto-columns: max-content;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &__contact {
+    // display: flex;
+    // width: 70px;
+    // justify-content: space-between;
+    display: none;
+
+    &__button {
+      margin-left: 67%;
+    }
+
+    &__button-link {
+      color: $blue;
+      text-decoration: none;
+      background-color: $ygreen;
+      border-radius: 7px;
+      padding: 10px 10px 10px 10px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 900;
+      font-family: 'Poppins', sans-serif;
+      transition: all .25s ease-in-out;
+    }
+
+    &__button-link:hover {
+      color: $ygreen;
+      background-color: $blue;
+      border: 1px solid $ygreen;
+      transition: all .25s ease-in-out;
+    }
+  }
+
+  &__content {
+    margin-right: 3%;
+  }
+
+  &-item {
+    text-align: left;
+    font-family: "Kanit", sans-serif;
+    font-weight: bold;
+    line-height: 0;
+    @media screen and (min-width:1440px) {
+      margin: 20px 100px;
+  }
+  }
+
+}
+
+.hamburger {
+    cursor: pointer;
+
+    &.active .bar:nth-child(2){
+        opacity: 0;
+      }
+    &.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+      }
+    &.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+      }
+  }
+
+  .nav__contact__button {
+    &.active {
+      display: none;
+    }
+  }
+
+  .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: white;
+  }
+
+  @media(min-width:425px){
+
+  .nav-menu{
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: $blue;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+  .nav-item{
+
+      &:first-child::before {
+        content: "";
+        height: 0.55rem;
+        width: 90px;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        background-color: $ygreen;
+  }
+
+  a:hover {
+    color: $ygreen;
+  }
+
+    }
+  .nav-menu.active {
+    margin: 0;
+    left: 0;
+    padding: 50px;
+    }
+  }
+
+.nav-menu__sub-menu {
+  display: none;
+}

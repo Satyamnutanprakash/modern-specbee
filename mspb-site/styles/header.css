@@ -1,0 +1,131 @@
+header {
+  background-color: #0020f6;
+  padding: 0 20px;
+}
+header li {
+  list-style: none;
+}
+header li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+}
+.nav__logo {
+  margin-left: 3%;
+}
+.nav__logo svg {
+  width: 200px;
+  fill: #fff;
+}
+.nav-menu {
+  display: grid;
+  grid-auto-columns: max-content;
+  width: 100vw;
+  height: 100vh;
+}
+.nav__contact {
+  display: none;
+}
+.nav__contact__button {
+  margin-left: 67%;
+}
+.nav__contact__button-link {
+  color: #0020f6;
+  text-decoration: none;
+  background-color: #e3f307;
+  border-radius: 7px;
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.25s ease-in-out;
+}
+.nav__contact__button-link:hover {
+  color: #e3f307;
+  background-color: #0020f6;
+  border: 1px solid #e3f307;
+  transition: all 0.25s ease-in-out;
+}
+.nav__content {
+  margin-right: 3%;
+}
+.nav-item {
+  text-align: left;
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  line-height: 0;
+}
+@media screen and (min-width: 1440px) {
+  .nav-item {
+    margin: 20px 100px;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav__contact__button.active {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+@media (min-width: 425px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #0020f6;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item:first-child::before {
+    content: "";
+    height: 0.55rem;
+    width: 90px;
+    position: absolute;
+    left: 0;
+    top: 65px;
+    background-color: #e3f307;
+  }
+  .nav-item a:hover {
+    color: #e3f307;
+  }
+  .nav-menu.active {
+    margin: 0;
+    left: 0;
+    padding: 50px;
+  }
+}
+.nav-menu__sub-menu {
+  display: none;
+}/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,93 @@
+@use "./abstract/colors" as *;
+
+.services {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: auto;
+
+  &__top {
+    display: flex;
+    padding: 0px 10rem;
+    margin-bottom: 3rem;
+    justify-content: space-around;
+
+    @media screen and (max-width:430px) {
+      flex-direction: column-reverse;
+      display: flex;
+      padding: 0px 10px;
+      margin-bottom: 3rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media screen and (min-width:768px) {
+      padding: 0px 0.25rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    padding: 0px 10rem;
+    justify-content: space-around;
+
+    &:first-child {
+      margin-top: 3.5rem;
+    }
+
+    @media screen and (max-width:430px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+    }
+
+    @media screen and (min-width:768px) {
+      padding: 0px 0.25rem;
+    }
+  }
+
+  &__item {
+    width: 45%;
+
+    @media screen and (max-width:430px) {
+      width: 95%;
+    }
+  }
+
+  &__heading {
+    font-family: Work Sans,sans-serif;
+    color: $blue;
+  }
+
+  &__description {
+    font-family: Work Sans,sans-serif;
+  }
+
+  &__image img {
+    width: 530px;
+    height: 397.5px;
+
+    @media screen and (max-width:430px) {
+      width: 386.60px;
+      height: 289.20px;
+    }
+
+    @media screen and (min-width:768px) {
+      width: 364px;
+      height: 273px;
+    }
+  }
+}
+
+@media screen and (max-width:430px) {
+  .services {
+
+  &__heading h2 {
+    font-size: 20px;
+  }
+
+}
+}
