@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+}
+.container {
+  background-color: #0020f6;
+}
+
+.container__title {
+  margin-top: 0;
+  font-size: 5rem;
+  padding-top: 5rem;
+  color: white;
+}
+
+.container__title::before {
+  content: "";
+  height: 0.75rem;
+  width: 150px;
+  display: inline-block;
+  margin-bottom: 15px;
+  vertical-align: middle;
+  margin-right: 50px;
+  background-color: #e3f307;
+}
+
+.container__services {
+  background-color: #0020f6;
+  padding-bottom: 30px;
+}
+
+.services__list {
+  max-width: 65rem;
+  padding-top: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.services__item {
+  width: 30%;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.services__icon {
+  background-image: url('../images/polygon.svg');
+  background-repeat: no-repeat;
+  height: 15rem;
+  width: 15rem;
+  background-position-x: 50%;
+  background-position-y: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.services__icon img {
+  width: 6rem;
+  transition: transform 0.35s ease-in-out;
+}
+
+.services__icon:hover img {
+  transform: scale(0.85);
+}
+
+.services__icon:before {
+  background: url("https://www.specbee.com/themes/custom/specbee/assets/media/icons/polygon-line.svg") no-repeat 50%/contain;
+  content: "";
+  height: 17.5rem;
+  position: absolute;
+  top: -1.125rem;
+  width: 17.5rem;
+  transform: scale(0.5);
+  z-index: -1;
+  transition: all 0.25s ease-in-out;
+}
+
+.services__icon:hover:before {
+  transform: scale(1);
+  z-index: 0;
+}
+
+.services__title {
+  color: #fff;
+  font-family: Montserrat,sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 1.75rem 0 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.services__desc {
+  color: #fff;
+  font-family: Montserrat,sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+}
+
+@media (max-width: 450px) {
+  .services__item {
+    display: block;
+    width: 100%;
+  }
+
+  .container__title {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .container__title::before {
+    width: 30px;
+  }
+}

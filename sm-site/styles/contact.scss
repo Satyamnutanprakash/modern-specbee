@@ -1,0 +1,61 @@
+@use "./abstract/colors" as *;
+
+.contact {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  padding: 90px 0px;
+  gap: 3rem;
+
+  &__description {
+    color: white;
+    font-family: Kanit,sans-serif;
+    font-size: 1.75rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  &__button {
+    display: block;
+  }
+
+  &__button-link {
+    color: $blue;
+    text-decoration: none;
+    background-color: $ygreen;
+    border-radius: 7px;
+    padding: 10px 40px 10px 40px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    transition: all .25s ease-in-out;
+  }
+
+  &__button-link:hover {
+    color: $ygreen;
+    background-color: $blue;
+    border: 1px solid $ygreen;
+    transition: all .25s ease-in-out;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .contact {
+    &__description {
+      font-size: 1.05rem;
+      width: 60%;
+    }
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .contact {
+    &__description {
+      font-size: 1.75rem;
+    }
+  }
+}
+

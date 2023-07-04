@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+}
+
+.distinct {
+    margin-bottom: 140px;
+
+    &__heading__title {
+        font-size: 5rem;
+        margin-top: 0;
+        padding-top: 6rem;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        color: #001186;
+        font-family: 'Kanit', sans-serif;
+        letter-spacing: .125rem;
+
+    &::before {
+        content: "";
+        height: 0.75rem;
+        width: 120px;
+        display: inline-block;
+        margin-bottom: 15px;
+        vertical-align: middle;
+        margin-right: 3.5rem;
+        background-color: #e3f307;
+    }
+
+}
+
+.distinct-card {
+    &__item {
+        position: relative;
+        width: 21.875rem;
+        height: 25rem;
+        text-align: center;
+        background-color: #f5f5f5;
+        overflow: hidden;
+        transition: 0.25s ease-in-out;
+
+    &:hover {
+        img {
+            display: none;
+        }
+    }
+
+    img {
+        width: 350px;
+        height: 250px;
+    }
+}
+
+&__list {
+    max-width: 70rem;
+    padding-top: 50px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin: -50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+    flex-direction: row;
+    justify-content: center;
+}
+
+&__title {
+    padding-left: 1.25rem;
+    text-align: left;
+    font-size: 1.175rem;
+    color: #001186;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+
+    &::after {
+        position:absolute;
+        content: "";
+        height: 0.25rem;
+        width: 64px;
+        display: inline-block;
+        vertical-align: middle;
+        right: 0%;
+        background-color: #0020f6;
+    }
+}
+
+&__text {
+    font-size: 0.875rem;
+    text-align: left;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+}
+}
+
+@media screen and (max-width:768px) {
+.distinct {
+
+    &__heading__title {
+        font-size: 3.125rem;
+
+    &::before {
+        width: 30px;
+        margin-right: 1rem;
+    }
+    }
+
+    &__item {
+        width: 20rem;
+
+    img {
+        width: 20rem;
+    }
+    }
+    &__list {
+        margin: -50px 30px;
+    }
+}
+}
