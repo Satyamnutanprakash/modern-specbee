@@ -116,3 +116,11 @@ body {
     }
 }
 }
+
+@media screen and (max-width:430px) {
+.distinct {
+    &__heading__title {
+    font-size: 2.65rem;
+    }
+    }
+}

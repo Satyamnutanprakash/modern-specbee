@@ -95,4 +95,9 @@ body {
   .distinct__list {
     margin: -50px 30px;
   }
+}
+@media screen and (max-width: 430px) {
+  .distinct__heading__title {
+    font-size: 2.65rem;
+  }
 }/*# sourceMappingURL=distinct.css.map */

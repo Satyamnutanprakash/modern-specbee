@@ -1,25 +1,55 @@
 .testimonial {
-  display: flex;
-  justify-content: center;
-  margin-left: -25px;
+  display: block;
+  margin-left: 4%;
+}
+@media only screen and (min-width: 1440px) {
+  .testimonial {
+    display: flex;
+    justify-content: center;
+    margin-left: -25px;
+  }
+}
+.testimonial__icon {
+  margin-right: 2%;
 }
 .testimonial__text {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  width: 60%;
+  margin: 0;
+  width: 90%;
+}
+@media only screen and (min-width: 1440px) {
+  .testimonial__text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 60%;
+  }
 }
 .testimonial__text p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+@media only screen and (min-width: 1440px) {
+  .testimonial__text p {
+    font-size: 1.5rem;
+  }
+}
 .testimonial__author__name {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 900;
   font-family: Montserrat, sans-serif;
 }
+@media only screen and (min-width: 1440px) {
+  .testimonial__author__name {
+    font-size: 24px;
+  }
+}
 .testimonial__author__designation {
-  font-size: 16px;
+  font-size: 14px;
   font-family: Montserrat, sans-serif;
   color: #0f0f0f;
+}
+@media only screen and (min-width: 1440px) {
+  .testimonial__author__designation {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=testimonial.css.map */

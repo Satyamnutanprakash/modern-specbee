@@ -1,32 +1,55 @@
 @use "./abstract/colors" as *;
 
 .testimonial {
-  display: flex;
-  justify-content: center;
-  margin-left: -25px;
+    display: block;
+    margin-left: 4%;
+
+  @media only screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: center;
+    margin-left: -25px;
+  }
+
+  &__icon {
+    margin-right: 2%;
+  }
 
   &__text {
+    margin: 0;
+    width: 90%;
+
+    @media only screen and (min-width: 1440px) {
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 60%;
+    }
 
   p {
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      @media only screen and (min-width: 1440px) {
+      font-size: 1.5rem;
+    }
   }
   }
 
   &__author__name {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 900;
     font-family: Montserrat,sans-serif;
+    @media only screen and (min-width: 1440px) {
+      font-size: 24px;
+    }
   }
 
   &__author__designation {
-    font-size: 16px;
+    font-size: 14px;
     font-family: Montserrat,sans-serif;
     color: #0f0f0f;
+    @media only screen and (min-width: 1440px) {
+      font-size: 16px;
+    }
   }
 
 }
@@ -55,6 +78,7 @@
 //     &__icon {
 //       width: 100vw;
 //       height: auto;
+//       margin-right: 2%;
 //     }
 //   }
 // }
