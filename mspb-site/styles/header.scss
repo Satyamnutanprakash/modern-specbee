@@ -37,14 +37,35 @@ header{
     height: 100vh;
   }
 
+  &-menu.active {
+    margin: 0;
+    left: 0;
+    padding: 50px 50px 50px 120px;
+
+    @media screen and (min-width:1440px) {
+      margin: 0;
+      left: 0;
+      padding: 50px;
+    }
+  }
+
   &__contact {
-    // display: flex;
-    // width: 70px;
-    // justify-content: space-between;
-    display: none;
+    display: flex;
+    width: 70px;
+    justify-content: space-between;
+    margin-left: 20%;
+
+    @media screen and (min-width:1440px) {
+      display: none;
+    }
 
     &__button {
-      margin-left: 67%;
+      display: none;
+
+      @media screen and (min-width:1440px) {
+        display: inline;
+        margin-left: 67%;
+      }
     }
 
     &__button-link {
@@ -77,8 +98,29 @@ header{
     font-family: "Kanit", sans-serif;
     font-weight: bold;
     line-height: 0;
+
+    &:first-child::before {
+      content: "";
+      height: 0.55rem;
+      width: 90px;
+      position: absolute;
+      left: 0;
+      top: 45px;
+      background-color: $ygreen;
+    }
+
     @media screen and (min-width:1440px) {
       margin: 20px 100px;
+
+      &:first-child::before {
+        content: "";
+        height: 0.55rem;
+        width: 90px;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        background-color: $ygreen;
+      }
   }
   }
 
@@ -129,26 +171,26 @@ header{
     }
   .nav-item{
 
-      &:first-child::before {
-        content: "";
-        height: 0.55rem;
-        width: 90px;
-        position: absolute;
-        left: 0;
-        top: 65px;
-        background-color: $ygreen;
-  }
+  //     &:first-child::before {
+  //       content: "";
+  //       height: 0.55rem;
+  //       width: 90px;
+  //       position: absolute;
+  //       left: 0;
+  //       top: 65px;
+  //       background-color: $ygreen;
+  // }
 
   a:hover {
     color: $ygreen;
   }
+}
 
-    }
-  .nav-menu.active {
-    margin: 0;
-    left: 0;
-    padding: 50px;
-    }
+  // .nav-menu.active {
+  //   margin: 0;
+  //   left: 0;
+  //   padding: 50px;
+  //   }
   }
 
 .nav-menu__sub-menu {
