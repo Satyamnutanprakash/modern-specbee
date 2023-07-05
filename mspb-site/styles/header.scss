@@ -169,22 +169,13 @@ header{
       text-align: center;
       transition: 0.3s;
     }
-  .nav-item{
 
-  //     &:first-child::before {
-  //       content: "";
-  //       height: 0.55rem;
-  //       width: 90px;
-  //       position: absolute;
-  //       left: 0;
-  //       top: 65px;
-  //       background-color: $ygreen;
-  // }
+  .nav-item{
 
   a:hover {
     color: $ygreen;
   }
-}
+  }
 
   // .nav-menu.active {
   //   margin: 0;
