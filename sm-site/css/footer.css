@@ -72,14 +72,12 @@
 }
 .footer__locations {
   padding-top: 2.265rem;
-  -moz-column-count: 2;
   column-count: 2;
   margin: 0 20px;
   border-top: 0.06rem solid lightslategrey;
 }
 @media only screen and (min-width: 1024px) {
   .footer__locations {
-    -moz-column-count: 3;
     column-count: 3;
     padding-top: 0;
     border: none;
@@ -92,7 +90,6 @@
 .footer__locations__wrapper {
   padding: 0 20px;
   margin-bottom: 2.5rem;
-  -moz-column-break-inside: avoid;
   break-inside: avoid;
 }
 .footer__locations__address {
