@@ -1,0 +1,9 @@
+.development__accordion__title {
+  display: block;
+}
+.development__accordion__content {
+  display: none;
+}
+.development__accordion__content.active {
+  display: block;
+}

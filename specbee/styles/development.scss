@@ -1,0 +1,13 @@
+.development__accordion {
+
+  &__title {
+  display: block;
+  }
+
+  &__content {
+  display: none;
+  &.active {
+      display: block;
+    }
+  }
+}
