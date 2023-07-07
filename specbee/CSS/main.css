@@ -1,0 +1,351 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+header {
+  background-color: #0020f6;
+  padding: 0 20px;
+}
+header li {
+  list-style: none;
+}
+header li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+}
+.nav__logo {
+  margin-left: 3%;
+}
+.nav__logo svg {
+  width: 200px;
+  fill: #fff;
+}
+.nav-menu {
+  display: grid;
+  grid-auto-columns: max-content;
+  width: 100vw;
+  height: 100vh;
+}
+.nav-menu.active {
+  margin: 0;
+  left: 0;
+  padding: 50px 50px 50px 120px;
+}
+@media screen and (min-width: 1440px) {
+  .nav-menu.active {
+    padding: 50px;
+  }
+}
+.nav__contact {
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+  margin-left: 20%;
+}
+@media screen and (min-width: 1440px) {
+  .nav__contact {
+    display: none;
+  }
+}
+.nav__contact__button {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .nav__contact__button {
+    display: inline;
+    margin-left: 67%;
+  }
+}
+.nav__contact__button-link {
+  color: #0020f6;
+  text-decoration: none;
+  background-color: #e3f307;
+  border-radius: 7px;
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.25s ease-in-out;
+}
+.nav__contact__button-link:hover {
+  color: #e3f307;
+  background-color: #0020f6;
+  border: 1px solid #e3f307;
+  transition: all 0.25s ease-in-out;
+}
+.nav__content {
+  margin-right: 3%;
+}
+.nav-item {
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  line-height: 0;
+}
+.nav-item:first-child::before {
+  content: "";
+  height: 0.55rem;
+  width: 90px;
+  position: absolute;
+  left: 0;
+  top: 45px;
+  background-color: #e3f307;
+}
+@media screen and (min-width: 1440px) {
+  .nav-item {
+    margin: 20px 100px;
+  }
+  .nav-item:first-child::before {
+    top: 65px;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav__contact__button.active {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+@media (min-width: 425px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #0020f6;
+    width: 100%;
+    transition: 0.3s;
+  }
+  .nav-item a:hover {
+    color: #e3f307;
+  }
+}
+.nav-menu__sub-menu {
+  display: none;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+.footer {
+  background-color: #fff;
+  padding-bottom: 5.5rem;
+  padding-top: 5.5rem;
+}
+.footer-menu__left {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1440px) {
+  .footer-menu__left {
+    width: 450px;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer-menu__left {
+    gap: 30%;
+    justify-content: normal;
+  }
+}
+.footer-menu__right {
+  padding-top: 2.625rem;
+  padding-top: 2.625rem;
+}
+.footer-menu__list {
+  list-style: none;
+  line-height: 24px;
+  padding: 0 20px;
+}
+.footer-menu__item a {
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(0, 17, 134);
+}
+.footer-menu__item a:hover {
+  color: #0020f6;
+}
+.footer__locations {
+  padding-top: 2.265rem;
+  column-count: 2;
+  margin: 0 20px;
+  border-top: 0.06rem solid lightslategrey;
+}
+@media only screen and (min-width: 1440px) {
+  .footer__locations {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.footer__locations__title {
+  color: rgb(0, 17, 134);
+  font-size: 1rem;
+}
+.footer__locations__wrapper {
+  padding: 0 20px;
+  margin-bottom: 2.5rem;
+  break-inside: avoid;
+}
+.footer__locations__address {
+  color: #0020f6;
+  font-size: 0.875rem;
+  margin: 0 auto 1.75rem;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+.footer__locations__contact a {
+  color: rgb(0, 17, 134);
+  text-decoration: none;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+.footer__social {
+  padding: 0px 40px;
+  margin-top: 50px;
+}
+.footer__social h3 {
+  margin-bottom: 20px;
+  color: #0020f6;
+}
+.footer__social-icon {
+  display: flex;
+  list-style: none;
+  gap: 7.2%;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+.footer__social-icon li a {
+  color: #0020f6;
+}
+.footer__social__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 1440px) {
+  .footer__social__wrapper {
+    gap: 7.5rem;
+    flex-wrap: nowrap;
+  }
+}
+.footer__copyright {
+  color: rgb(0, 17, 134);
+  background-color: #fff;
+  padding: 16px 40px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+@media only screen and (min-width: 1440px) {
+  .footer__copyright {
+    padding: 16px 90px;
+  }
+}
+.footer__images {
+  display: flex;
+  width: 100%;
+  gap: 3.1%;
+}
+@media only screen and (min-width: 1440px) {
+  .footer__images {
+    margin-top: -75px;
+    width: 500px;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__images {
+    width: 100px;
+  }
+}
+.footer__img {
+  width: 80px;
+}
+.footer__img:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.social-icon__icon:hover {
+  transform: translateY(-20px);
+  transition: 0.5s;
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer {
+    padding-bottom: 4.5rem;
+    padding-top: 4.5rem;
+    display: flex;
+    padding-left: 3.5rem;
+  }
+  .footer-menu__left {
+    gap: 1;
+    padding: 28px 64px 28px 0;
+    margin-left: 40px;
+    border-right: 0.06rem solid lightslategrey;
+  }
+  .footer-menu__right {
+    gap: 0;
+    padding: 28px 28px 0px 40px;
+  }
+  .footer-menu__list {
+    padding: 0;
+    padding-right: 10px;
+  }
+  .footer__locations {
+    column-count: 3;
+    padding-top: 0;
+    border: none;
+  }
+  .footer__images {
+    gap: 6%;
+  }
+}

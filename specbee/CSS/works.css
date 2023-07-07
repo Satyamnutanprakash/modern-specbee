@@ -1,0 +1,126 @@
+.works__heading {
+  color: #0020f6;
+  font-size: 2rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .works__heading {
+    font-size: 2.8125rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .works__heading {
+    font-size: 4.0625rem;
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .works__heading {
+    padding: 0;
+    margin-left: -35px;
+  }
+}
+.works__heading::before {
+  content: "";
+  height: 0.75rem;
+  width: 35px;
+  display: inline-block;
+  margin-bottom: 15px;
+  vertical-align: middle;
+  margin-right: 1rem;
+  background-color: #e3f307;
+}
+@media screen and (min-width: 1024px) {
+  .works__heading::before {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .works__heading::before {
+    content: "";
+    height: 0.75rem;
+    width: 120px;
+    display: inline-block;
+    margin-bottom: 15px;
+    vertical-align: middle;
+    margin-right: 3rem;
+    background-color: #e3f307;
+  }
+}
+.works__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.works__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.works__button-link {
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(0, 17, 134);
+  border-radius: 7px;
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.25s ease-in-out;
+}
+.works__button-link:hover {
+  color: #e3f307;
+  background-color: #0020f6;
+  border: 1px solid #e3f307;
+  transition: all 0.25s ease-in-out;
+}
+.works__wrapper {
+  position: relative;
+  width: 21.875rem;
+  height: 25rem;
+  text-align: center;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+}
+.works__wrapper:hover img {
+  display: none;
+}
+.works__wrapper img {
+  width: 350px;
+  height: 250px;
+}
+.works__item {
+  max-width: 70rem;
+  padding-top: 50px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin: -50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  flex-direction: row;
+  justify-content: center;
+}
+.works__item__content-title {
+  padding-left: 1.25rem;
+  text-align: left;
+  font-size: 1.175rem;
+  color: #001186;
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
+}
+.works__item__content-title::after {
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  width: 64px;
+  display: inline-block;
+  vertical-align: middle;
+  right: 0%;
+  background-color: #0020f6;
+}

@@ -1,0 +1,5 @@
+@use "./abstracts/colors" as *;
+
+.slide__wrapper {
+  background-color: $blue;
+}

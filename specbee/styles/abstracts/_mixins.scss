@@ -1,0 +1,68 @@
+@use './colors' as *;
+
+@mixin button ($color, $bg-color) {
+  color: $color;
+  text-decoration: none;
+  background-color: $bg-color;
+  border-radius: 7px;
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  transition: all .25s ease-in-out;
+
+  &:hover {
+    color: $yellow-green;
+    background-color: $blue;
+    border: 1px solid $yellow-green;
+    transition: all .25s ease-in-out;
+  }
+}
+
+@mixin heading ($color, $sd-width, $ld-width) {
+    color: $color;
+    font-size: 2rem;
+    font-family: "Kanit", sans-serif;
+    font-weight: bold;
+
+    @media screen and (min-width:768px) {
+        font-size: 2.8125rem;
+    }
+
+    @media screen and (min-width:1024px) {
+        font-size: 4.0625rem;
+        padding: 0 20px;
+    }
+
+    @media screen and (min-width:1440px) {
+        padding: 0;
+        margin-left: -35px;
+    }
+
+    &::before {
+        content: "";
+        height: 0.75rem;
+        width: $sd-width;
+        display: inline-block;
+        margin-bottom: 15px;
+        vertical-align: middle;
+        margin-right: 1rem;
+        background-color: $yellow-green;
+
+        @media screen and (min-width:1024px) {
+            display: none;
+        }
+
+        @media screen and (min-width:1440px) {
+            content: "";
+            height: 0.75rem;
+            width: $ld-width;
+            display: inline-block;
+            margin-bottom: 15px;
+            vertical-align: middle;
+            margin-right: 3rem;
+            background-color: $yellow-green;
+        }
+    }
+}

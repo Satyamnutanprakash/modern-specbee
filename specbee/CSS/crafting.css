@@ -1,0 +1,84 @@
+.crafting {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: auto;
+}
+.crafting__top {
+  display: flex;
+  padding: 0px 10rem;
+  margin-bottom: 3rem;
+  justify-content: space-around;
+}
+@media screen and (max-width: 430px) {
+  .crafting__top {
+    flex-direction: column-reverse;
+    display: flex;
+    padding: 0px 10px;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .crafting__top {
+    padding: 0px 0.25rem;
+  }
+}
+.crafting__bottom {
+  display: flex;
+  padding: 0px 10rem;
+  justify-content: space-around;
+}
+@media screen and (max-width: 430px) {
+  .crafting__bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .crafting__bottom {
+    padding: 0px 0.25rem;
+  }
+}
+.crafting__item {
+  width: 45%;
+}
+@media screen and (max-width: 430px) {
+  .crafting__item {
+    width: 95%;
+  }
+}
+.crafting__heading {
+  font-family: Work Sans, sans-serif;
+  color: #0020f6;
+}
+.crafting__description {
+  font-family: Work Sans, sans-serif;
+}
+.crafting__image img {
+  width: 386.6px;
+  height: 289.2px;
+}
+@media screen and (min-width: 1440px) {
+  .crafting__image img {
+    width: 530px;
+    height: 397.5px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .crafting__image img {
+    width: 364px;
+    height: 273px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .crafting__heading h2 {
+    font-size: 20px;
+  }
+}
