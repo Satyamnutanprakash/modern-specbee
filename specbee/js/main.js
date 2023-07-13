@@ -2,7 +2,7 @@ const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const contactButton = document.querySelector(".nav__contact__button");
 const navMenuSubMenu = document.querySelector(".nav-menu__sub-menu");
-
+const addition = document.querySelector(".addition");
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
@@ -10,10 +10,16 @@ hamburger.addEventListener("click", () => {
     contactButton.classList.toggle("active");
 })
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}))
+// document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+//     hamburger.classList.remove("active");
+//     navMenu.classList.remove("active");
+// }))
+
+addition.addEventListener("click", () => {
+    addition.classList.toggle("active");
+    navMenuSubMenu.classList.toggle("active");
+})
+
 
 $(document).ready(function(){
   $('.slide__wrapper').slick({
@@ -42,4 +48,5 @@ icon.addEventListener('click', () => {
     }
     });
 })
+
 

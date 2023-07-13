@@ -4,6 +4,11 @@
 header{
     background-color: $blue;
     padding: 0 20px;
+    backdrop-filter: blur(0);
+
+    &.scroll {
+      background-color: transparent;
+    }
 
     li{
       list-style: none;
@@ -96,7 +101,7 @@ header{
       margin: 20px 100px;
 
       &:first-child::before {
-        top: 65px;
+        top: 80px;
       }
   }
   }
@@ -156,20 +161,54 @@ header{
 
 .nav-menu__sub-menu {
   display: none;
-}
 
-.nav-menu__sub-menu.active {
-  display: block;
-  padding-left: 30px;
-}
-.sub-item {
-  margin: 20px 0;
-  padding-right: 30px;
-}
-.sub-link {
-  font-size: 1rem;
+  &.active {
+    display: block;
+    padding-left: 30px;
+  }
+  .sub-item {
+    line-height: 1;
+    margin: 20px 0;
+    padding-right: 30px;
+  }
+  .sub-link {
+    font-size: 1rem;
 
-  @media only screen and (min-width: 768px) {
-    font-size: 1.5rem;
+    @media only screen and (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 }
+
+
+.nbar{
+  display: block;
+  width: 20px;
+  height: 5px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: white;
+
+  &:first-child{
+    transform: translateY(11px) rotate(90deg);
+  }
+  &:last-child{
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.addition {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: 0.3s;
+
+  &.active .nbar:nth-child(1){
+    transform: translateY(10px) rotate(180deg);
+    }
+  &.active .nbar:nth-child(2){
+    opacity: 0;
+    }
+}
+

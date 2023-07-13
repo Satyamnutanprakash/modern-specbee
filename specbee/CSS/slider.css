@@ -1,3 +1,11 @@
 .slide__wrapper {
   background-color: #0020f6;
 }
+
+.slick-next {
+  display: none;
+}
+
+.slick-prev {
+  display: none;
+}
