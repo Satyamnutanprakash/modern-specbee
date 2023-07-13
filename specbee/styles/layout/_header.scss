@@ -157,3 +157,19 @@ header{
 .nav-menu__sub-menu {
   display: none;
 }
+
+.nav-menu__sub-menu.active {
+  display: block;
+  padding-left: 30px;
+}
+.sub-item {
+  margin: 20px 0;
+  padding-right: 30px;
+}
+.sub-link {
+  font-size: 1rem;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1.5rem;
+  }
+}

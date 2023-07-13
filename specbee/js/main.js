@@ -2,7 +2,6 @@ const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const contactButton = document.querySelector(".nav__contact__button");
 const navMenuSubMenu = document.querySelector(".nav-menu__sub-menu");
-const devAccordion = document.querySelectorAll(".development__accordion");
 
 
 hamburger.addEventListener("click", () => {
@@ -25,11 +24,14 @@ $(document).ready(function(){
   });
 });
 
+
+const devAccordion = document.querySelectorAll(".development__accordion");
+
 devAccordion.forEach(item => {
 
-const title = document.querySelector(".development__accordion__title");
+const icon = item.querySelector(".development__accordion__icon");
 
-title.addEventListener('click', () => {
+icon.addEventListener('click', () => {
     for ( i=0; i < devAccordion.length; i++) {
         if (devAccordion[i] != item) {
             devAccordion[i].classList.remove('active');

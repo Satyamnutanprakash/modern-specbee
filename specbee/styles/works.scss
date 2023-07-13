@@ -3,7 +3,7 @@
 
 .works {
   &__heading {
-    @include heading($blue, 35px, 120px);
+    @include heading($blue, 35px, 120px, -35px);
   }
 
   &__container {

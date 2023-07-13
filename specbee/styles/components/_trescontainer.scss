@@ -11,7 +11,7 @@
     }
 
     &__heading {
-      @include heading($white, 35px, 120px);
+      @include heading($white, 35px, 120px, -35px);
     }
     &__text {
         color: $white;

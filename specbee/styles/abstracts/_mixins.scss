@@ -20,7 +20,7 @@
   }
 }
 
-@mixin heading ($color, $sd-width, $ld-width) {
+@mixin heading ($color, $sd-width, $ld-width, $margin-l) {
     color: $color;
     font-size: 2rem;
     font-family: "Kanit", sans-serif;
@@ -37,7 +37,7 @@
 
     @media screen and (min-width:1440px) {
         padding: 0;
-        margin-left: -35px;
+        margin-left: $margin-l;
     }
 
     &::before {
