@@ -1,0 +1,13 @@
+name: Modern Specbee Theme
+type: theme
+description: 'Modern Specbee site replica theme'
+core_version_requirement: '>=9.2'
+base theme: stable9
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer_left: 'Footer Left Region'
+  footer_right: 'Footer Right Region'
+  footer_third: 'Footer Right Top Region'
+  footer_third_plus: 'Footer Right Bottom Region'
+  footer_bottom: 'Footer Bottom Region'
