@@ -1,0 +1,30 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+    {# {{ kint(content.field_insights_card) }} #}
+            {# {{ dump ( content ) }} #}
+
+          <div class="insights__wrapper">
+            <div class="insights__cards">
+              {{ content.field_vector_img[0] }}
+              <div class="insights__content">
+              <h4 class="insights__title">{{ content.field_title }}</h4>
+              <div class="insights__desc">
+                <time> {{ content.field_published_date }} </time><span>&nbsp;|&nbsp;</span> {{ content.field_author_name }}
+              </div>
+              </div>
+            </div>
+          </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
+

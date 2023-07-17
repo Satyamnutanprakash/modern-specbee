@@ -1,0 +1,31 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+    {# {{ kint(content.field_insights_block) }} #}
+      {# {{ dump ( content ) }} #}
+
+      <div class="insights">
+        {# <a href="{{ content.field_card_link[0]['#url'] }}" class="insights__link"> #}
+          <div class="insights__content">
+            <div class="insights__heading"><h3>{{ content.field_title }}</h3></div>
+            <div class="insights__text">
+              <p>{{ content.field_description }}</p>
+            </div>
+            <div class="insights__card-wpr">
+            {{ content.field_insights }}
+            </div>
+          </div>
+        {# </a> #}
+      </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
