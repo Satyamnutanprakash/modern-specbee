@@ -2,80 +2,125 @@
 @use './abstracts/mixins' as *;
 
 .development {
-  // &__heading__title {
-  //   @include heading($blue, 35px, 175px, -143px);
+    background-color: $blue;
+    margin-bottom: 10px;
+    padding-top: 6rem;
+    // position: relative;
 
-  // }
+    &__heading {
+        font-size: 4.0625rem;
+        color: $white;
+        margin-left: 225px;
+        padding-bottom: 4rem;
 
-  &__heading {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    margin-left: 120px;
-    margin-right: auto;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
+        &:before {
+            background-color: $yellow-green;
+            content: "";
+            height: 0.625rem;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            position: absolute;
+            top: 270px;
+            left: 0;
+            width: 10rem;
+        }
+    }
 
-  &__description {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 30px;
-  }
+    &__description {
+        padding-bottom: 4rem;
+        max-width: 40rem;
+        margin-left: 225px;
+        color: $white;
+        font-size: 1.125rem;
+        line-height: 1.65;
+    }
+
 }
+
 .development__list {
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
 
+    &__plus {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        justify-content: center;
+        gap: 3.5rem;
+    }
 }
 
 .development__accordion {
-  width: 45%;
-  padding-right: 2.5rem;
-  cursor: pointer;
-  font-size: 1.25rem;
-  font-weight: 800;
-  border-bottom: 1px solid $blue;
-  border-top: 1px solid $blue;
-  display: block;
+    border-top: .0625rem solid $white;
+    width: 35rem;
 
-  &.active {
-    display: block;
-
-    .development__accordion__content {
-      display: block;
-      font-weight: 400;
-      font-size: 1rem;
-      line-height: 2;
-      padding-bottom: 2.5rem;
+    &.active .development__accordion__title::after {
+        display: none;
     }
-  }
 
-  &__title {
-  display: inline;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+    &:last-child {
+        border-bottom: .0625rem solid $white;
+    }
 
-  a {
-    text-decoration: none;
-    color: $blue;
-    font-weight: bold;
-  }
-  }
+    &__title {
+        background-color: $blue;
+        padding: 0px 40px 0px 0;
+        cursor: pointer;
+        color: $white;
+        font-size: 20px;
+        font-weight: 800;
+        position: relative;
 
-  &__content {
-  display: none;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.5;
-  margin-bottom: 30px;
-  }
-}
+        &::before {
+            background: $white;
+            content: "";
+            height: 0.25rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transition: all .25s ease-in-out;
+            width: 1rem;
+        }
 
-.fa-solid {
-  display: inline;
+        &::after {
+            background: $white;
+            content: "";
+            height: 0.25rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transition: all .25s ease-in-out;
+            transform: rotate(90deg);
+            width: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $white;
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        max-height: 0;
+        color: $white;
+
+        &.show {
+            max-height: 500px;
+            padding-bottom: 2.5rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 2;
+        }
+
+        li {
+            font-size: 1.125rem;
+            line-height: 2;
+        }
+    }
 }

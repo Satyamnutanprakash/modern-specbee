@@ -1,73 +1,141 @@
+// @use './abstracts/mixins' as *;
+// @use './abstracts/colors' as *;
+
+
+// // .billboard__container {
+// //   @include heading($white, 35px, 120px, -35px);
+// // }
+
+// .billboard {
+
+//   // background: $blue;
+//   display: flex;
+//   flex-direction: column;
+//   padding: 10px 30px;
+//   justify-content: left;
+//   align-items: baseline;
+
+//   background: $blue url('https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg.webp');
+//   background-blend-mode: multiply;
+//   background-size: cover;
+
+//   &__title {
+//     text-transform: uppercase;
+//     color: $white;
+//     font-size: 2rem;
+//     font-family: "Kanit", sans-serif;
+//     font-weight: bold;
+//     line-height: 1;
+
+//     @media screen and (min-width:768px) {
+//         font-size: 2.8125rem;
+//     }
+
+//     @media screen and (min-width:1024px) {
+//         font-size: 5.0625rem;
+//         padding: 0 20px;
+//     }
+
+//     @media screen and (min-width:1440px) {
+//         padding: 0;
+//     }
+//     // @include heading($white, 35px, 120px, -35px);
+//   }
+
+//   &__description {
+//     color: $white;
+//     font-size: 1rem;
+//     font-family: 'Work Sans',sans-serif;
+//     font-weight: 300;
+//     line-height: 1;
+
+//     @media screen and (min-width:768px) {
+//         font-size: 2.8125rem;
+//     }
+
+//     @media screen and (min-width:1024px) {
+//         font-size: 1.125rem;
+//         padding: 0 20px;
+//     }
+
+//     @media screen and (min-width:1440px) {
+//         padding: 0;
+//     }
+//   }
+
+//   &__button {
+//     margin-top: 40px;
+//     &__link {
+//       text-transform: uppercase;
+//       @include button($blue, $yellow-green);
+//     }
+//   }
+// }
+
+//
+
 @use './abstracts/mixins' as *;
 @use './abstracts/colors' as *;
 
-
-// .billboard__container {
-//   @include heading($white, 35px, 120px, -35px);
-// }
-
 .billboard {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    background: $dark-blue url('https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg-light.webp') no-repeat 50%;
+    background-blend-mode: multiply;
+    background-size: cover;
 
-  // background: $blue;
-  display: flex;
-  flex-direction: column;
-  padding: 10px 30px;
-  justify-content: left;
-  align-items: baseline;
-
-  background: $blue url('https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg.webp');
-  background-blend-mode: multiply;
-  background-size: cover;
-
-  &__title {
-    text-transform: uppercase;
-    color: $white;
-    font-size: 2rem;
-    font-family: "Kanit", sans-serif;
-    font-weight: bold;
-    line-height: 1;
-
-    @media screen and (min-width:768px) {
-        font-size: 2.8125rem;
+    &__container {
+      width: 25%;
     }
 
-    @media screen and (min-width:1024px) {
-        font-size: 5.0625rem;
-        padding: 0 20px;
+    &__heading {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: $white;
+        padding-top: 3.5rem;
+        text-transform: uppercase;
+        line-height: 1;
     }
 
-    @media screen and (min-width:1440px) {
-        padding: 0;
-    }
-    // @include heading($white, 35px, 120px, -35px);
-  }
-
-  &__description {
-    color: $white;
-    font-size: 1rem;
-    font-family: 'Work Sans',sans-serif;
-    font-weight: 300;
-    line-height: 1;
-
-    @media screen and (min-width:768px) {
-        font-size: 2.8125rem;
+    &__description {
+        color: $white;
+        margin: 0 auto 1.75rem;
     }
 
-    @media screen and (min-width:1024px) {
-        font-size: 1.125rem;
-        padding: 0 20px;
+    &__banner img {
+      max-width: 100%;
+
     }
 
-    @media screen and (min-width:1440px) {
-        padding: 0;
-    }
-  }
+    &__button {
+        margin-top: 3.5rem;
 
-  &__button {
-    margin-top: 40px;
-    &__link {
-      text-transform: uppercase;
-      @include button($blue, $yellow-green);
+        &__link {
+          @include button($blue, $yellow-green);
+        }
     }
-  }
+
+
+    // &__plus {
+    //     color: $white;
+    //     text-align: center;
+    //     text-transform: uppercase;
+    //     font-size: 1rem;
+    //     padding-bottom: 1rem;
+    //     letter-spacing: 0.125rem;
+
+    //     &::after{
+    //         background-color: yellow;
+    //         content: "";
+    //         display: block;
+    //         height: 0.3125rem;
+    //         left: 50%;
+    //         position: absolute;
+    //         -webkit-transform: translateX(-50%);
+    //         -ms-transform: translateX(-50%);
+    //         transform: translateX(-50%);
+    //         width: 3.75rem;
+    //     }
+    // }
 }

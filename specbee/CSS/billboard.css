@@ -1,65 +1,33 @@
 .billboard {
   display: flex;
-  flex-direction: column;
-  padding: 10px 30px;
-  justify-content: left;
-  align-items: baseline;
-  background: #0020f6 url("https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg.webp");
+  justify-content: center;
+  margin-bottom: 5rem;
+  background: rgb(0, 17, 134) url("https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg-light.webp") no-repeat 50%;
   background-blend-mode: multiply;
   background-size: cover;
 }
-.billboard__title {
-  text-transform: uppercase;
-  color: #fff;
+.billboard__container {
+  width: 25%;
+}
+.billboard__heading {
   font-size: 2rem;
-  font-family: "Kanit", sans-serif;
-  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  padding-top: 3.5rem;
+  text-transform: uppercase;
   line-height: 1;
-}
-@media screen and (min-width: 768px) {
-  .billboard__title {
-    font-size: 2.8125rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .billboard__title {
-    font-size: 5.0625rem;
-    padding: 0 20px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .billboard__title {
-    padding: 0;
-  }
 }
 .billboard__description {
   color: #fff;
-  font-size: 1rem;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 300;
-  line-height: 1;
+  margin: 0 auto 1.75rem;
 }
-@media screen and (min-width: 768px) {
-  .billboard__description {
-    font-size: 2.8125rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .billboard__description {
-    font-size: 1.125rem;
-    padding: 0 20px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .billboard__description {
-    padding: 0;
-  }
+.billboard__banner img {
+  max-width: 100%;
 }
 .billboard__button {
-  margin-top: 40px;
+  margin-top: 3.5rem;
 }
 .billboard__button__link {
-  text-transform: uppercase;
   color: #0020f6;
   text-decoration: none;
   background-color: #e3f307;

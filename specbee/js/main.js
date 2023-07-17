@@ -31,22 +31,24 @@ $(document).ready(function(){
 });
 
 
-const devAccordion = document.querySelectorAll(".development__accordion");
+const accordionItems = document.querySelectorAll('.development__accordion');
 
-devAccordion.forEach(item => {
+accordionItems.forEach((item) => {
+  const title = item.querySelector('.development__accordion__title');
+  const content = item.querySelector('.development__accordion__content');
 
-const icon = item.querySelector(".development__accordion__icon");
+  title.addEventListener('click', function() {
+    const expandedItem = document.querySelector('.development__accordion.active');
+    const expandedContent = expandedItem?.querySelector('.development__accordion__content');
 
-icon.addEventListener('click', () => {
-    for ( i=0; i < devAccordion.length; i++) {
-        if (devAccordion[i] != item) {
-            devAccordion[i].classList.remove('active');
-        }
-        else {
-            item.classList.toggle('active');
-        }
+    if (expandedItem && expandedContent !== content) {
+      expandedItem.classList.remove('active');
+      expandedContent.classList.remove('show');
     }
-    });
-})
+
+    item.classList.toggle('active');
+    content.classList.toggle('show');
+  });
+});
 
 
