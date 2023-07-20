@@ -1,0 +1,16 @@
+<div>
+  {% block content %}
+
+    <div class="contact">
+      <div class="contact__description">
+      {{ content.field_cta_text }}
+      </div>
+      <div class="contact__button">
+        <a href="{{ content.field_cta_link[0]['#url'] }} " class="contact__button__link">
+        {{ content.field_cta_link[0]['#title'] }}
+        </a>
+      </div>
+    </div>
+
+  {% endblock %}
+</div>
