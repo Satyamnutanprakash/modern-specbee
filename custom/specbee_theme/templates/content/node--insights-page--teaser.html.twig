@@ -73,19 +73,19 @@
 
   <div{{ content_attributes }}>
     <div{{ title_attributes }} class="insights__wrapper">
-      <a href="{{ url }}" rel="bookmark">
         <div class="insights__cards">
           {{ content.field_insights_image }}
           <div class="insights__content">
-            <h4 class="insights__title">
-              {{ label }}
-            </h4>
+              <a href="{{ url }}" rel="bookmark">
+                <h4 class="insights__title">
+                  {{ label }}
+                </h4>
+              </a>
             <div class="insights__desc">
               <span> {{ content.field_insights_publish_date }} | {{ content.field_insights_author }} </span>
             </div>
           </div>
         </div>
-      </a>
     </div>
   </div>
 

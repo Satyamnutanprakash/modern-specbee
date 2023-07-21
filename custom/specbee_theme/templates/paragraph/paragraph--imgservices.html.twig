@@ -4,6 +4,7 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
+    content.field_revert_promo_direction[0]["#markup"] == "On" ? 'revert-block'
 
   ]
 %}
@@ -16,7 +17,7 @@
           {{ content.field_service_img[0] }}
           </div>
 
-          {# {{ dump ( content.field_promo_body ) }} #}
+          {# {{ dump ( content.field_revert_promo_direction[0]["#markup"] ) }} #}
 
           <div class="cosvs__content">
             <div class="cosvs__content__title">
