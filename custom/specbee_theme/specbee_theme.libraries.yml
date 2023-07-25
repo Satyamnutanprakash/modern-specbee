@@ -1,0 +1,35 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      CSS/global-styles.css: {}
+
+cta-block:
+  css:
+    theme:
+      CSS/cta-block.css: {}
+
+insights-block:
+  css:
+    theme:
+      CSS/insights-block.css: {}
+
+promo-block:
+  css:
+    theme:
+      CSS/promo-block.css: {}
+
+standing-block:
+  css:
+    theme:
+      CSS/standing-block.css: {}
+
+billboard-block:
+  css:
+    theme:
+      CSS/billboard-block.css: {}
+
+  js:
+    js/global-scripts.js: {}
+  dependencies:
+    - core/jquery

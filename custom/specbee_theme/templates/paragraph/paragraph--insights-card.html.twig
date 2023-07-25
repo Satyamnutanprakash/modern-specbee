@@ -6,13 +6,14 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+
+{{ attach_library('specbee_theme/insights-block')}}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
     {# {{ kint(content.field_insights_card) }} #}
             {# {{ dump ( content ) }} #}
-
-          <div class="insights__wrapper">
             <div class="insights__cards">
               {{ content.field_vector_img[0] }}
               <div class="insights__content">
@@ -22,7 +23,6 @@
               </div>
               </div>
             </div>
-          </div>
 
     {% endblock %}
   </div>

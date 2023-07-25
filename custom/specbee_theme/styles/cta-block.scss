@@ -1,0 +1,46 @@
+@use "abstracts/colors" as *;
+@use "abstracts/mixins" as *;
+
+.contact {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  padding: 90px 0px;
+  gap: 3rem;
+
+  &__description {
+    color: $white;
+    font-family: Kanit,sans-serif;
+    font-size: 1.75rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  &__button {
+    display: block;
+
+    &__link {
+      @include button;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 425px) {
+  .contact {
+    &__description {
+      font-size: 1.05rem;
+      width: 60%;
+    }
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .contact {
+    &__description {
+      font-size: 1.75rem;
+    }
+  }
+}

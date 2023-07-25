@@ -1,0 +1,46 @@
+.billboard__container {
+  background: rgb(0, 17, 134) url("https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg-light.webp") no-repeat 50%;
+  background-size: cover;
+  background-blend-mode: multiply;
+  width: 100%;
+  height: 60vh;
+}
+.billboard__content {
+  padding: 0 20px;
+  margin-bottom: 5rem;
+}
+.billboard__content__title {
+  font-size: 4.0625rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  padding-top: 7.8125rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.billboard__content__desc {
+  color: #fff;
+  margin: 1.75rem auto;
+  font-size: 1.1rem;
+}
+.billboard__content__button {
+  margin-top: 4.5rem;
+}
+.billboard__content__button__link {
+  color: #0020f6;
+  text-decoration: none;
+  background-color: #e3f307;
+  border-radius: 7px;
+  padding: 10px 40px 10px 40px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.25s ease-in-out;
+}
+.billboard__content__button__link:hover {
+  color: #e3f307;
+  background-color: #0020f6;
+  border: 1px solid #e3f307;
+  transition: all 0.25s ease-in-out;
+}

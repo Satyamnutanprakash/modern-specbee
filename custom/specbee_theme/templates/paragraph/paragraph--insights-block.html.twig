@@ -6,6 +6,9 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+
+{{ attach_library('specbee_theme/insights-block')}}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
@@ -15,12 +18,12 @@
       <div class="insights">
         {# <a href="{{ content.field_card_link[0]['#url'] }}" class="insights__link"> #}
           <div class="insights__content">
-            <div class="insights__heading"><h2>{{ content.field_title }}</h2></div>
+            <div class="insights__heading">{{ content.field_ftitle }}</div>
             <div class="insights__text">
               <p>{{ content.field_description }}</p>
             </div>
             <div class="insights__card-wpr">
-            {{ content.field_insights_view }}
+            {{ content.field_insights_specific_page }}
             </div>
           </div>
         {# </a> #}

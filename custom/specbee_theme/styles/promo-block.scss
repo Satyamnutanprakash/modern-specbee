@@ -1,0 +1,69 @@
+@use "./abstracts/colors" as *;
+
+.promo {
+  &__wrapper {
+    padding: 3.5rem 1.25rem;
+    box-sizing: border-box;
+  }
+
+  &__item {
+      display: flex;
+      flex-direction: column-reverse;
+
+  @media screen and (min-width: 768px) {
+      justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1326px) {
+      padding: 3.5rem 12.25rem;
+  }
+
+      &:first-child {
+          margin-bottom: 6rem;
+      }
+
+      @media screen and (min-width: 768px) {
+          flex-direction: row;
+
+          &:nth-child(2) {
+              flex-direction: row-reverse;
+          }
+      }
+
+  }
+
+  &__img img{
+      max-width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+      &__img {
+          width: 48%;
+      }
+  }
+
+  &__content {
+      margin-top: 1rem;
+      @media screen and (min-width: 768px) {
+          width: 48%;
+      }
+
+      &__title {
+          font-size: 1.25rem;
+          line-height: 1.25;
+          margin-bottom: 1.25rem;
+          text-transform: uppercase;
+          color: $dark-blue;
+
+          @media screen and (min-width: 768px) {
+              font-size: 1.5rem;
+          }
+      }
+
+      &__desc p{
+          font-size: 1rem;
+          line-height: 1.65;
+          // margin-bottom: 2.5rem;
+      }
+      }
+
+  }

@@ -8,32 +8,33 @@
 
   ]
 %}
+
+{{ attach_library('specbee_theme/promo-block')}}
+
+<div class= "promo__item">
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
     {% block content %}
     {# {{ kint(content.field_imgservices) }} #}
-      <div class= "cosvs__block">
-          <div class= "cosvs__img">
+          <div class= "promo__img">
           {{ content.field_service_img[0] }}
           </div>
 
           {# {{ dump ( content.field_revert_promo_direction[0]["#markup"] ) }} #}
 
-          <div class="cosvs__content">
-            <div class="cosvs__content__title">
+          <div class="promo__content">
+            <div class="promo__content__title">
               <h3>{{ content.field_title }}</h3>
             </div>
-            <div class="cosvs__content__desc">
+            <div class="promo__content__desc">
               {{ content.field_promo_body }}
             </div>
-            <div class="cosvs__content__button">
+            {# <div class="promo__content__button">
               <a href="{{ content.field_cta_link[0]['#url'] }} " class="contact__button__link">
                 {{ content.field_cta_link[0]['#title'] }}
               </a>
-            </div>
+            </div> #}
           </div>
-      </div>
 
     {% endblock %}
-  </div>
 {% endblock paragraph %}
+</div>
