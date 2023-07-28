@@ -1,0 +1,26 @@
+specbee_theme.phone:
+  label: phone
+  mediaQuery: '(max-width: 767px)'
+  weight: 0
+  multipliers:
+      - 1x
+      - 2x
+specbee_theme.tablet:
+  label: tablet
+  mediaQuery: '(min-width: 768px) and (max-width: 1024px)'
+  weight: 1
+  multipliers:
+      - 1x
+      - 2x
+specbee_theme.desktop:
+  label: desktop
+  mediaQuery: '(min-width: 1025px) and (max-width: 1250px)'
+  weight: 2
+  multipliers:
+      - 1x
+specbee_heme.lg-desktop:
+  label: lg-desktop
+  mediaQuery: '(min-width: 1251px)'
+  weight: 3
+  multipliers:
+      - 1x

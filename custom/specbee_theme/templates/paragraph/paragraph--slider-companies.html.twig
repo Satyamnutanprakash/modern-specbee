@@ -1,0 +1,42 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{{ attach_library('specbee_theme/slider-block')}}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes)}}>
+		{% block content %}
+
+			<div class="slider">
+				<div class="slider__companies">
+					<div class="slider__heading">
+            {{ content.field_slider_title }}
+          </div>
+					<div class="slider__description">
+            {{ content.field_slider_description }}
+					</div>
+					<div class="slider__animated">
+            {{ content.field_slider_animated }}
+					</div>
+
+				{% if content.field_slider_button[0]['#title'] %}
+
+					<div class="slider__button">
+						<a href="{{ content.field_slider_button[0]['#url'] }} " class="slider__button__link">
+							{{ content.field_slider_button[0]['#title'] }}
+						</a>
+					</div>
+				{% endif %}
+				</div>
+			</div>
+
+		{% endblock %}
+	</div>
+{% endblock paragraph %}
+

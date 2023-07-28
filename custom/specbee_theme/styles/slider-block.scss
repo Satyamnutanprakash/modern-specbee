@@ -1,0 +1,81 @@
+@use "./abstracts/colors" as *;
+@use "abstracts/mixins" as *;
+
+.slider {
+      background-color: $blue;
+    &__heading {
+
+    padding: 30px 30px 0px;
+      p {
+            color: $white;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: 700;
+            padding-bottom: 1rem;
+            letter-spacing: 0.125rem;
+
+            &::after{
+              background-color: $yellow-green;
+              content: "";
+              display: block;
+              height: 0.3125rem;
+              left: 50%;
+              position: absolute;
+              transform: translateX(-50%);
+              width: 5.75rem;
+            }
+          }
+      }
+
+    &__description p {
+      color: $white;
+      margin: 0.15rem auto;
+      font-size: 1.1rem;
+      padding: 20px;
+      width: 70%;
+    }
+
+    &__animated {
+    width: 90vw;
+    padding: 10px;
+    margin-left: 65px;
+    }
+
+    &__wrapper {
+      margin-top: 6rem;
+      width: 100%;
+      transition: width 0.55s ease-in-out;
+    }
+
+    &__button {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+
+    &__link {
+      @include button;
+    }
+  }
+
+}
+
+.slick-arrow::before {
+  display: none;
+}
+
+
+.slick-list {
+  transform: translate3d(0, 0, 0);
+  position:relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-track {
+  transition: width 0.95s ease-in-out;
+}
+
+

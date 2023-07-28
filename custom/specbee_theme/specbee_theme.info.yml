@@ -7,7 +7,6 @@ libraries:
 - specbee_theme/global-styling
 regions:
   header: 'Header'
-  billboard: 'Billboard'
   content: 'Content'
   content_bottom: 'Content Bottom'
   footer_left: 'Footer Left Region'

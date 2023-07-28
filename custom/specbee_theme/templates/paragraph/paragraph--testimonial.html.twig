@@ -1,0 +1,45 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{{ attach_library('specbee_theme/testimonial-block')}}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes)}}>
+		{% block content %}
+			{# {{ kint(content.field_insights_block) }} #}
+			{# {{ dump ( content ) }} #}
+
+			<div class="testimonial">
+        <div class="testimonial__icon">
+          {# {{ content.field_quote_icon }} #}
+          <svg viewbox="0 0 113 63" fill="#e3f307" xmlns="http://www.w3.org/2000/svg">
+
+            <path d="M8.22593 31.3316V0.0342193H53.4604V31.3316L14.8277 62.3844L0.401592 55.7826L8.22593 31.3316ZM67.642 0.0342193H112.876V31.3316L74.2438 62.3844L60.0622 55.7826L67.642 31.3316V0.0342193Z">
+            </path>
+          </svg>
+
+        </div>
+
+				<div class="testimonial__content">
+          <div class="testimonial__cite">
+            {{ content.field_cite_text }}
+          </div>
+          <div class="testimonial__cite__person">
+            {{ content.field_cite_person }}
+          </div>
+          <div class="testimonial__cite__designation">
+						{{ content.field_cite_designation }}
+					</div>
+        </div>
+			</div>
+
+		{% endblock %}
+	</div>
+{% endblock paragraph %}
+

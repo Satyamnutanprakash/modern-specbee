@@ -1,0 +1,104 @@
+.testimonial {
+  display: flex;
+  padding: 0 20px;
+  padding-top: 56px;
+  padding-bottom: 84px;
+  color: #fff;
+  margin: 20px 0;
+  background: #0020f6;
+}
+@media only screen and (min-width: 768px) {
+  .testimonial {
+    padding: 0 50px;
+    padding-top: 64px;
+    padding-bottom: 111px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .testimonial {
+    padding-bottom: 152px;
+  }
+}
+@media only screen and (min-width: 1326px) {
+  .testimonial {
+    padding-left: 250px;
+  }
+}
+.testimonial__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  .testimonial__content {
+    flex-direction: column;
+  }
+}
+.testimonial__icon {
+  fill: #e3f307;
+  width: 80px;
+}
+@media only screen and (min-width: 768px) {
+  .testimonial__icon {
+    width: 60px;
+    margin-right: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .testimonial__icon {
+    width: 75px;
+  }
+}
+.testimonial__cite__text p {
+  font-size: 1rem;
+  margin-top: 20px;
+  line-height: 1.25;
+}
+@media only screen and (min-width: 768px) {
+  .testimonial__cite__text p {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+.testimonial__cite__person p {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+@media only screen and (min-width: 768px) {
+  .testimonial__cite__person p {
+    font-size: 1.75rem;
+    padding-left: 75px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .testimonial__cite__person p {
+    padding-left: 90px;
+  }
+}
+.testimonial__cite__designation p {
+  margin-top: 0;
+  font-size: 0.75rem;
+  padding-left: 0;
+}
+@media only screen and (min-width: 768px) {
+  .testimonial__cite__designation p {
+    font-size: 1rem;
+    padding-left: 75px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .testimonial__cite__designation p {
+    padding-left: 90px;
+  }
+}
+
+.testimonial-secondary {
+  background-color: #fff;
+  color: black;
+}
+
+.testimonial-secondary__icon {
+  fill: #0020f6;
+}

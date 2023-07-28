@@ -29,7 +29,27 @@ billboard-block:
     theme:
       CSS/billboard-block.css: {}
 
+testimonial-block:
+  css:
+    theme:
+      CSS/testimonial-block.css: {}
+
+slider-block:
+  css:
+    theme:
+      CSS/slider-block.css: {}
   js:
-    js/global-scripts.js: {}
+    js/main.js: {}
+  dependencies:
+    - specbee_theme/slick
+
+slick:
+  css:
+    theme:
+      assets/slick/slick-theme.css: {}
+      assets/slick/slick.css: {}
+  js:
+    # assets/slick/slick.min.js: {}
+    assets/slick/slick.js: {}
   dependencies:
     - core/jquery
