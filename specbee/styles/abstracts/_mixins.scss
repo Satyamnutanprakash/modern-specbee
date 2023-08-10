@@ -66,3 +66,23 @@
         }
     }
 }
+
+@mixin newbutton ($color, $bg-color, $h-color, $hbg-color ) {
+    color: $color;
+    text-decoration: none;
+    background-color: $bg-color;
+    border-radius: 30px;
+    padding: 5px 18px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    transition: all .25s ease-in-out;
+
+    &:hover {
+        color: $h-color;
+        background-color: $hbg-color;
+        border: 1px solid $h-color;
+        transition: all .25s ease-in-out;
+      }
+}

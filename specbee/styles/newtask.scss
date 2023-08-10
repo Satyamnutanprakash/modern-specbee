@@ -24,14 +24,117 @@
 
 }
 &__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 35px;
+  text-align: center;
+  min-height: 450px;
   background-color: $white;
-  margin-bottom: 20px;
-  padding: 60px 50px;
-  background-color: white;
-  border-shadow: 2px black;
-  position: relative;
-  left: -7%;
   box-shadow: 0px 16px 59px 0 rgba(0,0,0,0.13);
-
 }
+
+&__data {
+  background-color: $light-blue;
+  color: $white;
+  border-radius: 30px;
+  padding: 8px 40px;
+}
+
+&__info {
+  flex-grow: 1;
+}
+
+&__title {
+  h3{
+    font-size: 16px;
+    line-height: 1.2;
+    font-family: proxima bold,Arial,sans-serif;
+    color: #174c8f;
+    margin-bottom: 9px;
+  }
+}
+
+&__description {
+  p {
+    font-size: 16px;
+    font-family: proxima bold,Arial,sans-serif;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    color: #787878;
+    padding: 0 20px;
+  }
+}
+
+&__speed {
+  p{
+    color: #787878;
+    padding: 0 20px;
+    display: inline-block;
+    font-family: proxima bold,Arial,sans-serif;
+    margin-top: 15px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+}
+
+&__price {
+  p{
+    font-size: 44px;
+    line-height: 1.2;
+    color: $light-blue;
+    line-height: 26px;
+    font-family: proxima bold,Arial,sans-serif;
+    margin-top: 5px;
+    display: block;
+    margin-bottom: 10px;
+
+    &.ogprice {
+      display: inline;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+  }
+}
+
+&__price__plus {
+  width: 40%;
+  margin-left: 100px;
+
+  p {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: #787878;
+  font-weight: 600;
+  }
+}
+
+
+&__button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  &__link {
+    @include newbutton($white, $orange, $orange, $white);
+  }
+}
+}
+
+.plan__price {
+  &.ogprice {
+      &::before {
+        position: absolute;
+        content: "";
+        width: 130px;
+        left: 510px;
+        // right: 0;
+        // top: 80%;
+        border-top: 2px solid;
+        border-color: #174c8f;
+        transform: rotate(-10deg);
+    }
+  }
 }

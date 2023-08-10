@@ -21,15 +21,6 @@ addition.addEventListener("click", () => {
 })
 
 
-$(document).ready(function(){
-  $('.slide__wrapper').slick({
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      autoplay: true,
-      autoplaySpeed: 450,
-  });
-});
-
 
 const accordionItems = document.querySelectorAll('.development__accordion');
 

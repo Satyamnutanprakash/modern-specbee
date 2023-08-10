@@ -1,0 +1,90 @@
+@use "./abstracts/colors" as *;
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tech-card {
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 55px;
+    gap: 12%;
+    background-color: $bg-color;
+  }
+
+  &__item {
+    position: relative;
+    width: 44%;
+    margin-bottom: 40px;
+
+    &:hover {
+      & > .tech-card__description {
+        display: flex;
+        flex-direction: column;
+        width: 89.3%;
+        height: 100%;
+        position: absolute;
+      }
+      & > .tech-card__image {
+        display: none;
+      }
+    }
+
+    & > .tech-card__description {
+      display: none;
+      transition: display 0.15s ease-in;
+      color: white;
+      background-color: $red-bg;
+      h3 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__content {
+    border: 1px solid $red-bg;
+    background: $red-bg
+    ;
+    padding: 0px 210px;
+    margin-bottom: 20px;
+    bottom: 10px;
+    left: 25px;
+    position: absolute;
+    z-index: 10;
+    display: grid;
+
+    &__title {
+      color: white;
+      font-size: 24px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+
+      & > .fa-circle-right {
+        background-color: $bg-color;
+      }
+    }
+  }
+
+  &__link {
+    background-color: $text-bg;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &__text {
+    padding: 20px;
+    flex-grow: 1;
+  }
+}
